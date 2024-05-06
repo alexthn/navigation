@@ -1006,8 +1006,9 @@ class Node extends Element
             $nodeUrl = UrlHelper::siteUrl($nodeUrl);
         }
 
-        // Trim the node's url to normalise for comparison, after we've resolved it to an absolute URL.
+        // Trim the current and node's url to normalise for comparison, after we've resolved it to an absolute URL.
         $nodeUrl = trim($nodeUrl, '/');
+        $currentUrl = trim($currentUrl, '/');
 
         // Stop straight away if this is the homepage entry
         if ($this->_elementUrl === '__home__') {
