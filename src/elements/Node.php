@@ -1011,6 +1011,7 @@ class Node extends Element
 
         // Stop straight away if this is the homepage entry
         if ($this->_elementUrl === '__home__') {
+            $currentUrl = trim($currentUrl, '/');
             return $currentUrl === $nodeUrl;
         }
 
